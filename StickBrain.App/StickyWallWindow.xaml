@@ -1,0 +1,107 @@
+<Window x:Class="StickBrain.App.StickyWallWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StickBrain.App"
+        mc:Ignorable="d"
+        Title="StickBrain - Sticky Wall"
+        Width="1000"
+        Height="700">
+    <Grid Background="#FF1E1E1E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 상단 툴바: 새 메모 + 정렬 버튼들 + 시간 필터/정렬 + 검색 + 단축키 안내 -->
+        <DockPanel Grid.Row="0" Margin="10,8">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+                <Button x:Name="NewNoteButton"
+                        Width="90"
+                        Height="28"
+                        Margin="0,0,8,0"
+                        Content="새 메모"
+                        Click="NewNoteButton_OnClick"/>
+                <Button x:Name="CascadeButton"
+                        Width="90"
+                        Height="28"
+                        Margin="0,0,8,0"
+                        Content="캐스케이드"
+                        Click="CascadeButton_OnClick"/>
+                <Button x:Name="GridButton"
+                        Width="90"
+                        Height="28"
+                        Margin="0,0,8,0"
+                        Content="격자 정렬"
+                        Click="GridButton_OnClick"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center">
+                <!-- 시간 필터 -->
+                <ComboBox Width="110"
+                          Height="26"
+                          Margin="0,0,6,0"
+                          SelectedItem="{Binding TimeFilter}"
+                          VerticalContentAlignment="Center">
+                    <ComboBoxItem Content="전체" />
+                    <ComboBoxItem Content="오늘" />
+                    <ComboBoxItem Content="최근 7일" />
+                    <ComboBoxItem Content="최근 30일" />
+                </ComboBox>
+
+                <!-- 정렬 모드 -->
+                <ComboBox Width="120"
+                          Height="26"
+                          Margin="0,0,8,0"
+                          SelectedItem="{Binding Sort}"
+                          VerticalContentAlignment="Center">
+                    <ComboBoxItem Content="최근 수정 순" />
+                    <ComboBoxItem Content="생성일 최신 순" />
+                </ComboBox>
+
+                <TextBox Width="200"
+                         Height="26"
+                         Margin="0,0,10,0"
+                         VerticalContentAlignment="Center"
+                         Padding="4,0"
+                         Background="#FF2B2B2B"
+                         Foreground="White"
+                         BorderBrush="#444"
+                         BorderThickness="1"
+                         Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                         ToolTip="텍스트로 메모 검색"/>
+
+                <TextBlock VerticalAlignment="Center"
+                           Foreground="#AAFFFFFF"
+                           Text="전역 단축키: Ctrl + Shift + Space 로 어디서든 메모를 추가할 수 있어요."/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- 메모 월 (스크롤 가능) -->
+        <ScrollViewer Grid.Row="1"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto"
+                      CanContentScroll="False">
+            <ItemsControl ItemsSource="{Binding NotesView}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Canvas.Left" Value="{Binding X}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding Y}"/>
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="{x:Type local:StickyNoteViewModel}">
+                        <local:StickyNoteControl/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Window>
+

@@ -1,0 +1,42 @@
+<UserControl x:Class="StickBrain.App.StickyNoteControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:StickBrain.App"
+             Width="220"
+             Height="160">
+    <Border CornerRadius="6"
+            Background="{Binding ColorBrush}"
+            BorderBrush="#55000000"
+            BorderThickness="1"
+            Padding="8"
+            MouseLeftButtonDown="Border_OnMouseLeftButtonDown"
+            MouseMove="Border_OnMouseMove"
+            MouseLeftButtonUp="Border_OnMouseLeftButtonUp">
+        <Grid>
+            <TextBox Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Foreground="Black"
+                     FontSize="13"
+                     VerticalScrollBarVisibility="Auto"
+                     Margin="0,12,20,0"
+                     LostFocus="TextBox_OnLostFocus"/>
+
+            <Button Content="×"
+                    Width="18"
+                    Height="18"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Padding="0"
+                    Margin="0,-4,-4,0"
+                    Background="#33FFFFFF"
+                    BorderBrush="#55FFFFFF"
+                    BorderThickness="1"
+                    FontSize="12"
+                    Click="DeleteButton_OnClick"/>
+        </Grid>
+    </Border>
+</UserControl>
+

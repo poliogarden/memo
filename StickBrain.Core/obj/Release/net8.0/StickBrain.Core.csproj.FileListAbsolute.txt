@@ -1,0 +1,12 @@
+D:\16.memo\StickBrain.Core\bin\Release\net8.0\StickBrain.Core.deps.json
+D:\16.memo\StickBrain.Core\bin\Release\net8.0\StickBrain.Core.dll
+D:\16.memo\StickBrain.Core\bin\Release\net8.0\StickBrain.Core.pdb
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\StickBrain.Core.csproj.AssemblyReference.cache
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\StickBrain.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\StickBrain.Core.AssemblyInfoInputs.cache
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\StickBrain.Core.AssemblyInfo.cs
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\StickBrain.Core.csproj.CoreCompileInputs.cache
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\StickBrain.Core.dll
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\refint\StickBrain.Core.dll
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\StickBrain.Core.pdb
+D:\16.memo\StickBrain.Core\obj\Release\net8.0\ref\StickBrain.Core.dll

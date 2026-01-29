@@ -1,0 +1,15 @@
+D:\16.memo\StickBrain.Data\bin\Debug\net8.0\StickBrain.Data.deps.json
+D:\16.memo\StickBrain.Data\bin\Debug\net8.0\StickBrain.Data.dll
+D:\16.memo\StickBrain.Data\bin\Debug\net8.0\StickBrain.Data.pdb
+D:\16.memo\StickBrain.Data\bin\Debug\net8.0\StickBrain.Core.dll
+D:\16.memo\StickBrain.Data\bin\Debug\net8.0\StickBrain.Core.pdb
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBrain.Data.csproj.AssemblyReference.cache
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBrain.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBrain.Data.AssemblyInfoInputs.cache
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBrain.Data.AssemblyInfo.cs
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBrain.Data.csproj.CoreCompileInputs.cache
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBra.5B8C2B49.Up2Date
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBrain.Data.dll
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\refint\StickBrain.Data.dll
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\StickBrain.Data.pdb
+D:\16.memo\StickBrain.Data\obj\Debug\net8.0\ref\StickBrain.Data.dll
